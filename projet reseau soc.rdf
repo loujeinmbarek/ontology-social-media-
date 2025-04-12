@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#/"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#"
+     xmlns:untitled-ontology-71="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#apourHashTag -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#apourHashTag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#HashTag"/>
+        <rdfs:comment>une publication contient un hashtag</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#apourMedia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#apourMedia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media"/>
+        <rdfs:comment>une publication contient un fichier media</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#appartientAGroupe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#appartientAGroupe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe"/>
+        <rdfs:comment>un utilisateur est membre d&apos;un groupe</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#commente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#commente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire"/>
+        <rdfs:comment>un utilisateur comment une publication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#commenteSur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#commenteSur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:comment>un commentaire est sur une publication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#modére -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#modére">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#moderateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe"/>
+        <rdfs:comment>un modérateur gere un groupe</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#publie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#publie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:comment>un utilisateur publie un contenu</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#suit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#suit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:comment>un utilisateur suit un autre</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Detail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Detail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#contenu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#contenu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>contenu textuelle</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#datePublication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#datePublication">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>date de publication</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Email d&apos;un utilisateur</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#nom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>nom d&apos;utilisateur</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#nomGroupe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#nomGroupe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#texteCommentaire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#texteCommentaire">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#titre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#titre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>titre d&apos;une publication</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#preflabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#preflabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#HashTag"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#HashTag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#HashTag"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#admin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#admin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#admin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#imagepost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#imagepost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#lien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#lien">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#membre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#membre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#moderateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#moderateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#text -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#text">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#videopost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#videopost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#ClaraAdmin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#ClaraAdmin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#admin"/>
+        <untitled-ontology-71:publie rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostRomeVideo"/>
+        <untitled-ontology-71:email>clara@Admin.com</untitled-ontology-71:email>
+        <untitled-ontology-71:nom>clara Dubois</untitled-ontology-71:nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeRome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeRome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe"/>
+        <untitled-ontology-71:nomGroupe>Decouverte de Rome</untitled-ontology-71:nomGroupe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeVoyageFrance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeVoyageFrance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Groupe"/>
+        <untitled-ontology-71:nomGroupe>voyage en France</untitled-ontology-71:nomGroupe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#ImageAlpes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#ImageAlpes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#image"/>
+        <untitled-ontology-71:Detail>image de rondonée</untitled-ontology-71:Detail>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#JeanDupont -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#JeanDupont">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#membre"/>
+        <untitled-ontology-71:appartientAGroupe rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeVoyageFrance"/>
+        <untitled-ontology-71:commente rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#cm2"/>
+        <untitled-ontology-71:publie rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostParis"/>
+        <untitled-ontology-71:suit rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#SofiaLopez"/>
+        <untitled-ontology-71:email>jean@exemple.com</untitled-ontology-71:email>
+        <untitled-ontology-71:nom>JeanDupont</untitled-ontology-71:nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#MehdiModerateur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#MehdiModerateur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#moderateur"/>
+        <untitled-ontology-71:modére rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeVoyageFrance"/>
+        <untitled-ontology-71:email>mehdi@mod.com</untitled-ontology-71:email>
+        <untitled-ontology-71:nom>Mehdi Karim</untitled-ontology-71:nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostMontagne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostMontagne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#imagepost"/>
+        <untitled-ontology-71:apourMedia rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#ImageAlpes"/>
+        <untitled-ontology-71:contenu>photos des Alpes</untitled-ontology-71:contenu>
+        <untitled-ontology-71:datePublication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-28T08:30:00</untitled-ontology-71:datePublication>
+        <untitled-ontology-71:titre>Randonée</untitled-ontology-71:titre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostParis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostParis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#text"/>
+        <untitled-ontology-71:apourHashTag rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#TagVoyage"/>
+        <untitled-ontology-71:contenu>superbe  semaine a la tour Eiffel</untitled-ontology-71:contenu>
+        <untitled-ontology-71:datePublication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-01T10:00:00</untitled-ontology-71:datePublication>
+        <untitled-ontology-71:titre>Mon voyage a paris</untitled-ontology-71:titre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostRomeVideo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostRomeVideo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#videopost"/>
+        <untitled-ontology-71:apourHashTag rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#TagHistoire"/>
+        <untitled-ontology-71:apourMedia rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#videoColisse"/>
+        <untitled-ontology-71:contenu>video de mon trip</untitled-ontology-71:contenu>
+        <untitled-ontology-71:datePublication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-02T15:00:00</untitled-ontology-71:datePublication>
+        <untitled-ontology-71:titre>visite de colisee</untitled-ontology-71:titre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#SofiaLopez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#SofiaLopez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#membre"/>
+        <untitled-ontology-71:appartientAGroupe rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#GroupeRome"/>
+        <untitled-ontology-71:commente rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#com1"/>
+        <untitled-ontology-71:publie rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostMontagne"/>
+        <untitled-ontology-71:email>sofia@lopez.com</untitled-ontology-71:email>
+        <untitled-ontology-71:nom>sofia lopez</untitled-ontology-71:nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#TagHistoire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#TagHistoire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#HashTag"/>
+        <skos:preflabel>#histoire</skos:preflabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#TagVoyage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#TagVoyage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#HashTag"/>
+        <skos:preflabel>#voyage</skos:preflabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#cm2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#cm2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire"/>
+        <untitled-ontology-71:commenteSur rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostRomeVideo"/>
+        <untitled-ontology-71:texteCommentaire>belle video ! merci de partage</untitled-ontology-71:texteCommentaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#com1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#com1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#Commentaire"/>
+        <untitled-ontology-71:commenteSur rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#PostParis"/>
+        <untitled-ontology-71:texteCommentaire>wow j&apos;ai adoré aussi la tou Eiffel</untitled-ontology-71:texteCommentaire>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#videoColisse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#videoColisse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/3/untitled-ontology-7#video"/>
+        <untitled-ontology-71:Detail>video colisée</untitled-ontology-71:Detail>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
