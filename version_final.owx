@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/social"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/social">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="social" IRI="http://example.org/social#"/>
+    <Import>http://www.w3.org/2004/02/skos/core</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>An ontology for social network representation</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Social Network Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>v2.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AdministrateurPage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CentreInteret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Commentaire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Groupe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Influenceur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Page"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Photo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicationPopulaire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Utilisateur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UtilisateurActif"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Video"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aAime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aCentreInteret"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aCommente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aCreePublication"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aPourAmi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#administre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commentePublication"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#membreDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suitPage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#contenu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#datePublication"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titrePage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Publication2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utilisateur3"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#example"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Groupe1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Page1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Commentaire1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Publication1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Football"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utilisateur1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utilisateur2"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#PublicationPopulaire"/>
+        <ObjectMinCardinality cardinality="3">
+            <ObjectProperty IRI="#aAime"/>
+            <Class IRI="#Utilisateur"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#UtilisateurActif"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#aCreePublication"/>
+                <Class IRI="#Publication"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#aPourAmi"/>
+                <Class IRI="#Utilisateur"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AdministrateurPage"/>
+        <Class IRI="#Utilisateur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Influenceur"/>
+        <Class IRI="#Utilisateur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Photo"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicationPopulaire"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UtilisateurActif"/>
+        <Class IRI="#Influenceur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Video"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Commentaire"/>
+        <Class IRI="#Photo"/>
+        <Class IRI="#Video"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Commentaire"/>
+        <NamedIndividual IRI="#Commentaire1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CentreInteret"/>
+        <NamedIndividual IRI="#Football"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Groupe"/>
+        <NamedIndividual IRI="#Groupe1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Page"/>
+        <NamedIndividual IRI="#Page1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publication"/>
+        <NamedIndividual IRI="#Publication1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Video"/>
+        <NamedIndividual IRI="#Publication2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Utilisateur"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Utilisateur"/>
+        <NamedIndividual IRI="#Utilisateur2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Influenceur"/>
+        <NamedIndividual IRI="#Utilisateur3"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#commentePublication"/>
+        <NamedIndividual IRI="#Commentaire1"/>
+        <NamedIndividual IRI="#Publication1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aAime"/>
+        <NamedIndividual IRI="#Publication2"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aAime"/>
+        <NamedIndividual IRI="#Publication2"/>
+        <NamedIndividual IRI="#Utilisateur2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aAime"/>
+        <NamedIndividual IRI="#Publication2"/>
+        <NamedIndividual IRI="#Utilisateur3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aCentreInteret"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <NamedIndividual IRI="#Football"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aCreePublication"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <NamedIndividual IRI="#Publication1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aPourAmi"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <NamedIndividual IRI="#Utilisateur2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#suitPage"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <NamedIndividual IRI="#Page1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membreDe"/>
+        <NamedIndividual IRI="#Utilisateur2"/>
+        <NamedIndividual IRI="#Groupe1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aCreePublication"/>
+        <NamedIndividual IRI="#Utilisateur3"/>
+        <NamedIndividual IRI="#Publication2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aPourAmi"/>
+        <NamedIndividual IRI="#Utilisateur3"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#titrePage"/>
+        <NamedIndividual IRI="#Page1"/>
+        <Literal>Page Sport</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#contenu"/>
+        <NamedIndividual IRI="#Publication1"/>
+        <Literal>Bienvenue sur ma première publication !</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#datePublication"/>
+        <NamedIndividual IRI="#Publication1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-04T10:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <Literal>ali@example.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <Literal>Ali Ben Salah</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Utilisateur2"/>
+        <Literal>amira@example.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Utilisateur2"/>
+        <Literal>Amira Trabelsi</Literal>
+    </DataPropertyAssertion>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#aCreePublication"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#aPourAmi"/>
+    </SymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#aPourAmi"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aAime"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aCentreInteret"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aCommente"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aCreePublication"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aPourAmi"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#administre"/>
+        <Class IRI="#AdministrateurPage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#commentePublication"/>
+        <Class IRI="#Commentaire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#membreDe"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suitPage"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aAime"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aCentreInteret"/>
+        <Class IRI="#CentreInteret"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aCommente"/>
+        <Class IRI="#Commentaire"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aCreePublication"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aPourAmi"/>
+        <Class IRI="#Utilisateur"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#administre"/>
+        <Class IRI="#Page"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commentePublication"/>
+        <Class IRI="#Publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#membreDe"/>
+        <Class IRI="#Groupe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suitPage"/>
+        <Class IRI="#Page"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#aPourAmi"/>
+            <ObjectProperty IRI="#aCreePublication"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#aAime"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#contenu"/>
+        <Class IRI="#Publication"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#datePublication"/>
+        <Class IRI="#Publication"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#Utilisateur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nom"/>
+        <Class IRI="#Utilisateur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#titrePage"/>
+        <Class IRI="#Page"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#contenu"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#datePublication"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nom"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#titrePage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Football</IRI>
+        <Literal>Football</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Groupe1</IRI>
+        <Literal>Groupe Fans Foot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#example"/>
+        <IRI>#Publication1</IRI>
+        <Literal>This shows how publications can be classified based on their properties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PublicationPopulaire</IRI>
+        <Literal>Publication with at least 3 likes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Utilisateur1</IRI>
+        <Literal>Ali</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Utilisateur2</IRI>
+        <Literal>Amira</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UtilisateurActif</IRI>
+        <Literal>User who has either created content or has friends</Literal>
+    </AnnotationAssertion>
+    <Declaration>
+        <Class IRI="#Evenement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participeA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomEvenement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evenement1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Evenement"/>
+        <NamedIndividual IRI="#Evenement1"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomEvenement"/>
+        <NamedIndividual IRI="#Evenement1"/>
+        <Literal>Conférence sur les réseaux sociaux</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Utilisateur1"/>
+        <NamedIndividual IRI="#Evenement1"/>
+    </ObjectPropertyAssertion>
+
+</Ontology>
+
